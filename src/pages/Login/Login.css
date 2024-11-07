@@ -1,0 +1,137 @@
+/* Login Component Styles */
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('../../assets/background_banner.jpg') no-repeat center center;
+    background-size: cover;
+    color: #ffffff;
+  }
+  
+  .loginLogo {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .loginForm {
+    background-color: rgba(0, 0, 0, 0.75); /* Semi-transparent dark background */
+    padding: 40px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  }
+  
+  .loginForm h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .loginForm form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .loginForm input[type="text"],
+  .loginForm input[type="email"],
+  .loginForm input[type="password"] {
+    background-color: #333333;
+    border: 1px solid #555555;
+    border-radius: 4px;
+    padding: 12px;
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .loginForm input[type="text"]:focus,
+  .loginForm input[type="email"]:focus,
+  .loginForm input[type="password"]:focus {
+    border-color: #e50914; /* Netflix red for focus */
+    outline: none;
+  }
+  
+  .loginForm button {
+    background-color: #e50914;
+    color: #ffffff;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .loginForm button:hover {
+    background-color: #f40612; /* Slightly lighter red on hover */
+  }
+  
+  .formHelp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  .remember input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: #e50914; /* Styled checkbox */
+  }
+  
+  .formHelp p {
+    color: #aaaaaa;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .formHelp p:hover {
+    color: #ffffff;
+  }
+  
+  .formSwitch {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaaaaa;
+  }
+  
+  .formSwitch p {
+    margin: 5px 0;
+  }
+  
+  .formSwitch span {
+    color: #ffffff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .formSwitch span:hover {
+    color: #e50914;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 480px) {
+    .loginForm {
+      padding: 30px;
+    }
+  
+    .loginForm h1 {
+      font-size: 20px;
+    }
+  
+    .loginForm input[type="text"],
+    .loginForm input[type="email"],
+    .loginForm input[type="password"] {
+      font-size: 14px;
+    }
+  
+    .loginForm button {
+      font-size: 14px;
+    }
+  }

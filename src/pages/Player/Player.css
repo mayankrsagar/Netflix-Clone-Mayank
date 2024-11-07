@@ -1,0 +1,70 @@
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #181818;
+  color: #ffffff;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  justify-content: center;
+
+}
+
+.player img {
+  align-self: flex-start;
+  width: 50px;
+  height: 50px;
+  top: 2rem;
+ 
+  position: absolute;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.player iframe {
+  border: none;
+  
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.playerInfo {
+  margin-top: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.playerInfo p {
+  margin: 0;
+  color: #ccc;
+}
+
+.player img:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .player iframe {
+    height: 300px;
+  }
+
+  .playerInfo {
+    font-size: 1rem;
+  }
+}
+
+/* Additional polish */
+.playerInfo p {
+  transition: color 0.2s;
+}
+
+.playerInfo p:hover {
+  color: #ffffff;
+}

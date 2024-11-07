@@ -1,0 +1,62 @@
+.titleCards {
+    margin: 50px 0 30px 0;
+    overflow: hidden;
+}
+
+.titleCards h2 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.cardList {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 0 10px; /* Adds padding on the sides */
+    scroll-snap-type: x mandatory;
+}
+
+.cardList::-webkit-scrollbar {
+    display: none;
+}
+
+.cardList img {
+    width: 180px;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.cardList img:hover {
+    transform: scale(1.05); /* Adds a smooth hover effect */
+}
+
+.cardList .card {
+    position: relative;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+}
+
+.cardList .card p {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    margin: 0;
+    padding: 4px 8px;
+    font-size: 0.9rem;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.6); /* Background for readability */
+    border-radius: 4px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .titleCards h2 {
+        font-size: 1.5rem;
+    }
+
+    .cardList img {
+        width: 150px; /* Adjusts card width on smaller screens */
+    }
+}

@@ -1,0 +1,131 @@
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+}
+
+.bannerImg {
+  width: 100%;
+  object-fit: cover; /* Ensures image covers the hero section */
+  mask-image: linear-gradient(to right, transparent, black 75%);
+}
+
+/* Hero Caption Overlay */
+.heroCaption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  width: 100vw;
+  z-index: 1; /* Ensures the caption is above the hero image */
+}
+
+/* Caption Image */
+.captionImg {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 1rem;
+}
+
+/* Caption Text */
+.heroCaption p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+  max-width: 700px;
+}
+
+/* Hero Buttons */
+.heroBtns {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Button Styles */
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Play Button */
+.btn {
+  background-color: #e50914;
+  color: #ffffff;
+}
+
+.btn:hover {
+  background-color: #f61b2d;
+}
+
+/* More Info Button */
+.darkBtn {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+.darkBtn:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Additional spacing between Hero Section and Title Cards */
+.nowPlayingInHeroSection {
+  display: block;
+}
+.nowPlayingOutHeroSection {
+  display: none;
+}
+.hero + .moreCards {
+  margin-top: 80px; /* Adjust this value based on your design */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroCaption {
+    max-width: 80%;
+    bottom: 10px;
+    left: 10px;
+    padding: 0.8rem 1rem;
+  }
+  .nowPlayingInHeroSection {
+    display: none;
+  }
+  .nowPlayingOutHeroSection {
+    display: block;
+  }
+  .captionImg {
+    max-width: 250px;
+  }
+
+  .heroCaption p {
+    font-size: 0.9rem;
+  }
+
+  .hero + .moreCards {
+    margin-top: 60px; /* Adjust this value based on smaller screens */
+  }
+}
+
+@media (max-width:576px){
+  .heroCaption{
+    display: none;
+  }
+}
