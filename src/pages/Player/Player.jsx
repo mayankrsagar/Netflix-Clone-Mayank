@@ -22,7 +22,7 @@ const Player = () => {
     type: "",
     key: "",
   });
-
+  const apiKey = import.meta.env.VITE_TMDB_API_KEY;
   const options = {
     method: "GET",
     url: `https://api.themoviedb.org/3/movie/${id}/videos`,
@@ -30,7 +30,7 @@ const Player = () => {
     headers: {
       accept: "application/json",
       Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNGY1N2RkYzRkZGRmNjNlOTBhZDg0MWIwYTc0MTQ4OSIsIm5iZiI6MTczMDU1NzQ5Mi40NDgzMTIsInN1YiI6IjY3MjM1MGNkMDAzYzRiNWI1YjY0NDc3YSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.kIdGiiQmrGAiQOpQb96F89cQ2NEwYiOi0lItppjBRDI",
+        `Bearer ${apiKey}`,
     },
   };
 

@@ -12,11 +12,11 @@ import { Link } from 'react-router-dom';
 const TitleCards = ({ title, category }) => {
   const scrollHori = useRef();
   const [apiData, setApiData] = useState([]);
-
+  const apiKey = import.meta.env.VITE_TMDB_API_KEY;
   const options = {
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNGY1N2RkYzRkZGRmNjNlOTBhZDg0MWIwYTc0MTQ4OSIsIm5iZiI6MTczMDM2ODI0My43NjgzOCwic3ViIjoiNjcyMzUwY2QwMDNjNGI1YjViNjQ0NzdhIiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.mEib3s1nTSiuqI9vOVd7jmQEqDhDXvKgNkRASrSgCxg'
+      Authorization: `Bearer ${apiKey}`
     }
   };
 
