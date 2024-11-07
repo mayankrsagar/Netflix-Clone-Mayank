@@ -12,12 +12,13 @@ import { Link } from 'react-router-dom';
 const TitleCards = ({ title, category }) => {
   const scrollHori = useRef();
   const [apiData, setApiData] = useState([]);
-  const apiKey = import.meta.env.VITE_TMDB_API_KEY;
+
   const options = {
     headers: {
-      accept: 'application/json',
-      Authorization: `Bearer ${apiKey}`
-    }
+      accept: "application/json",
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNGY1N2RkYzRkZGRmNjNlOTBhZDg0MWIwYTc0MTQ4OSIsIm5iZiI6MTczMDM2ODI0My43NjgzOCwic3ViIjoiNjcyMzUwY2QwMDNjNGI1YjViNjQ0NzdhIiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.mEib3s1nTSiuqI9vOVd7jmQEqDhDXvKgNkRASrSgCxg",
+    },
   };
 
   const handleScroll = (event) => {
@@ -33,7 +34,7 @@ const TitleCards = ({ title, category }) => {
       );
       setApiData(response.data.results);
     } catch (error) {
-      console.error('Error fetching data:', error);
+      console.error("Error fetching data:", error);
     }
   };
 
@@ -60,7 +61,11 @@ const TitleCards = ({ title, category }) => {
           return (
             <Link to={`/player/${id}`} className="card" key={id}>
               <img
-                src={poster_path ? `https://image.tmdb.org/t/p/w500${poster_path}` : '/path/to/fallback/image.jpg'}
+                src={
+                  poster_path
+                    ? `https://image.tmdb.org/t/p/w500${poster_path}`
+                    : "/path/to/fallback/image.jpg"
+                }
                 alt={title || "Movie Poster"}
               />
               <p>{title || "Untitled"}</p>
