@@ -14,7 +14,7 @@ import {
 import back_arrow_icon from '../../assets/back_arrow_icon.png';
 
 const Player = () => {
-  const navigation=useNavigate();
+  const navigation = useNavigate();
   const { id } = useParams();
   const [apiData, setApiData] = useState({
     name: "",
@@ -57,7 +57,13 @@ const Player = () => {
   const { name, published_at, type, key } = apiData;
   return (
     <div className="player">
-      <img src={back_arrow_icon} alt="Back arrow icon" onClick={()=>{navigation(`/`)}}/>
+      <img
+        src={back_arrow_icon}
+        alt="Back arrow icon"
+        onClick={() => {
+          navigation(`/`);
+        }}
+      />
       <iframe
         src={`https://www.youtube.com/embed/${key}`}
         width="90%"
@@ -66,7 +72,7 @@ const Player = () => {
         allowFullScreen
       ></iframe>
       <div className="playerInfo">
-        <p>Published Date: {published_at.slice(0,10) || "N/A"}</p>
+        <p>Published Date: {published_at.slice(0, 10) || "N/A"}</p>
         <p>Name: {name || "N/A"}</p>
         <p>Type: {type || "N/A"}</p>
       </div>

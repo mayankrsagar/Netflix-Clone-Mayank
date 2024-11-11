@@ -1,0 +1,1 @@
+{"last_found_secrets": [{"match": "19e75851f2c3f25d751823d078038dd5f82370b035275b683daa8f986283aa41", "name": "Generic High Entropy Secret - commit://c8fad198cd8549f67fb3d77a6d71f2f2d6bc27a6/.env"}, {"match": "0112039b74a2b033dc7b232d636243e24c666065fa1985b3db93d81e354e2a1b", "name": "Bearer Token - commit://c8fad198cd8549f67fb3d77a6d71f2f2d6bc27a6/src/pages/Player/Player.jsx"}]}
